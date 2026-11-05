@@ -99,11 +99,11 @@ while successful_samples < sample_amount and attempts < max_attempt:
     sample_id = f"sample_{successful_samples:03d}"
     
     # saves evaluation sample with flag labels
-    evaluation_file = evaluation_DIR / f"{name_path[name]}_{sample_id}.csv"
+    evaluation_file = evaluation_DIR / f"{name}_{sample_id}.csv"
     sample.to_csv(evaluation_file, index=False, na_rep="NaN")
     
     agent_sample = sample.drop(columns=["Label"])
-    agent_file = agent_DIR / f"{name_path[name]}_{sample_id}.csv"
+    agent_file = agent_DIR / f"{name}_{sample_id}.csv"
     agent_sample.to_csv(agent_file, index=False, na_rep="NaN")
     
     print(

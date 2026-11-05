@@ -54,7 +54,7 @@ def convert_payload(row,dlc):
         
         payload[i] = byte_value
         
-        return bytes(payload)
+    return bytes(payload)
     
 def convert_csv_to_pcap(input_file, output_file):
     with open(input_file, 'r', newline="") as csv_file, \
