@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-input_file = "C:\\School\\CIS2347\\Project\\9) Car-Hacking Dataset\\normal_run_data\\normal_run_data.txt"
+input_file = "data\\original\\normal_run_data\\normal_run_data.txt"
 rows = []
 
 with open(input_file, "r") as f:
@@ -23,6 +23,6 @@ with open(input_file, "r") as f:
         
 columns = ["timestamp", "CAN_ID", "extra", "DLC", "Data_0", "Data_1", "Data_2", "Data_3", "Data_4", "Data_5", "Data_6", "Data_7"]
 df = pd.DataFrame(rows, columns=columns)
-df.to_csv("C:\\School\\CIS2347\\Project\\9) Car-Hacking Dataset\\normal_run_data\\normal_run_data.csv", index=False, na_rep="NaN")
+df.to_csv("data\\original\\normal_run_data\\normal_run_data.csv", index=False, na_rep="NaN")
 print("Conversion completed successfully.")
 print(df.head())
