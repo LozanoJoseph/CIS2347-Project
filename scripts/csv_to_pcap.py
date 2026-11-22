@@ -14,7 +14,7 @@ output_DIR.mkdir(parents=True, exist_ok=True)
 
 LINKTYPE_CAN_SOCKETCAN = 227
 
-CAN_FRAME_FORMAT = "<IB3x8s"  
+CAN_FRAME_FORMAT = ">IB3x8s"
 
 #converts Timestamp into seconds and microseconds for pcap file
 def convert_Timestamp(timestamp):

@@ -11,7 +11,9 @@ name_path = {
     "normal": "normal_run_data.csv",
     "dos": "DoS_dataset.csv",
     "fuzzy": "Fuzzy_dataset.csv",
-    "rpm": "RPM_dataset.csv"
+    "rpm": "RPM_dataset.csv",
+    "gear": "gear_dataset.csv"
+    
 }
 
 # Select attack dataset
@@ -19,13 +21,13 @@ name_path = {
 while True:
 
     name = input(
-        "Enter dataset to sample (dos/fuzzy/rpm): "
+        "Enter dataset to sample (dos/fuzzy/rpm/gear): "
     ).lower().strip()
 
-    if name in ["dos", "fuzzy", "rpm"]:
+    if name in ["dos", "fuzzy", "rpm", "gear"]:
         break
 
-    print("Invalid selection. Enter dos, fuzzy, or rpm.")
+    print("Invalid selection. Enter dos, fuzzy, rpm, or gear.")
 
 
 # Input files
